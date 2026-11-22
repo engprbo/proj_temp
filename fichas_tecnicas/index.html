@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Índice - Fichas Técnicas (fichas_tecnicas)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input { width: 100%; box-sizing: border-box; padding: 10px; font-size: 16px; margin: 12px 0 18px; }
+    ul { list-style: none; padding-left: 0; }
+    li { padding: 6px 0; border-bottom: 1px solid #eee; }
+    a { text-decoration: none; }
+    .meta { font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Índice do Repositório - fichas_tecnicas</h1>
+  <p><a href="../index.html">&larr; Voltar ao índice principal</a></p>
+  <label for="q"><b>Busca rápida (filtra por nome do ficheiro):</b></label>
+  <input id="q" type="text" placeholder="Introduza parte do nome do ficheiro..." />
+  <ul id="lista">
+    <li><a href="CABLE%20PARARRAYOS.pdf" target="_blank" rel="noopener noreferrer">CABLE PARARRAYOS.pdf</a></li>
+    <li><a href="CABLE-DE-COBRE-SUAVE-DESNUDO.pdf" target="_blank" rel="noopener noreferrer">CABLE-DE-COBRE-SUAVE-DESNUDO.pdf</a></li>
+    <li><a href="Catalogo%20Condulac.pdf" target="_blank" rel="noopener noreferrer">Catalogo Condulac.pdf</a></li>
+    <li><a href="Catalogo-CADWELD-conexiones-electricas.pdf" target="_blank" rel="noopener noreferrer">Catalogo-CADWELD-conexiones-electricas.pdf</a></li>
+    <li><a href="CONDUMEX%20XLP.pdf" target="_blank" rel="noopener noreferrer">CONDUMEX XLP.pdf</a></li>
+    <li><a href="CONTADOR%20DE%20DESCARGAS.pdf" target="_blank" rel="noopener noreferrer">CONTADOR DE DESCARGAS.pdf</a></li>
+    <li><a href="Planta%20de%20emergencia%20CS400.pdf" target="_blank" rel="noopener noreferrer">Planta de emergencia CS400.pdf</a></li>
+    <li><a href="PUNTA%20DE%20PARARRAYOS.pdf" target="_blank" rel="noopener noreferrer">PUNTA DE PARARRAYOS.pdf</a></li>
+    <li><a href="registro%20media%20tension%20RMTB4.pdf" target="_blank" rel="noopener noreferrer">registro media tension RMTB4.pdf</a></li>
+    <li><a href="Spec_GTC187DM220B_es.pdf" target="_blank" rel="noopener noreferrer">Spec_GTC187DM220B_es.pdf</a></li>
+    <li><a href="TABLERO%20DE%20TRANSFERENCIA.pdf" target="_blank" rel="noopener noreferrer">TABLERO DE TRANSFERENCIA.pdf</a></li>
+    <li><a href="Trabsformador%20tipo%20pedestal%20.pdf" target="_blank" rel="noopener noreferrer">Trabsformador tipo pedestal .pdf</a></li>
+  </ul>
+  <script>
+    const q = document.getElementById('q');
+    const lista = document.getElementById('lista');
+    q.addEventListener('input', () => {
+      const termo = q.value.toLocaleLowerCase();
+      [...lista.querySelectorAll('li')].forEach(li => {
+        li.style.display = li.textContent.toLocaleLowerCase().includes(termo) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
